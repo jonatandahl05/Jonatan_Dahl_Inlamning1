@@ -87,8 +87,12 @@
         <h2>Subscribe to our newsletter</h2>
         <p>Get the latest updates and offers.</p>
         <form>
-            <input type="text" name="name" placeholder="Your name">
-            <input type="email" name="email" placeholder="Your email">
+            <label for="newsletter-name">Name</label>
+            <input id="newsletter-name" type="text" name="name" placeholder="Your name" autocomplete="name" required>
+
+            <label for="newsletter-email">Email</label>
+            <input id="newsletter-email" type="email" name="email" placeholder="Your email" autocomplete="email" required>
+
             <button class="primary-button" type="submit">Subscribe</button>
         </form>
     </div>
