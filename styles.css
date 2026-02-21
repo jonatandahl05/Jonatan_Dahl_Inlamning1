@@ -2,14 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: none;
 }
+
 
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    color: #777777;
+    color: #444444; 
+    line-height: 1.6;
 }
+
 
 .top-bar {
     display: flex;
@@ -23,7 +25,7 @@ body {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #999999;
+    color: #333333; 
 }
 
 .menu {
@@ -31,12 +33,17 @@ body {
     gap: 16px;
 }
 
-.menu-item a {
+.menu-item {
     text-decoration: none;
-    color: #888888;
+    color: #333333;
     font-size: 14px;
 }
 
+.menu-item:hover {
+    text-decoration: underline;
+}
+
+/* Hero */
 .hero {
     position: relative;
     width: 100%;
@@ -55,7 +62,7 @@ body {
     top: 50%;
     left: 10%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.85);
     padding: 16px 24px;
     max-width: 420px;
 }
@@ -63,13 +70,19 @@ body {
 .primary-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #cccccc;
+    background-color: #333333;
     color: #ffffff;
-    text-decoration: none;
+    border: none;
     border-radius: 4px;
     font-size: 14px;
+    cursor: pointer;
 }
 
+.primary-button:hover {
+    background-color: #000000;
+}
+
+/* Content */
 .content {
     padding: 32px 24px;
 }
@@ -77,7 +90,7 @@ body {
 .section-title h2 {
     font-size: 24px;
     margin-bottom: 16px;
-    color: #666666;
+    color: #333333;
 }
 
 .products {
@@ -88,7 +101,7 @@ body {
 
 .product-card {
     width: 300px;
-    border: 1px solid #f0f0f0;
+    border: 1px solid #e0e0e0;
     padding: 12px;
     border-radius: 4px;
     background-color: #fcfcfc;
@@ -101,15 +114,14 @@ body {
     margin-bottom: 8px;
 }
 
-.product-card h1 {
+.product-card h3 {
     font-size: 18px;
     margin-bottom: 4px;
-    color: #555555;
+    color: #333333;
 }
 
 .product-description {
     font-size: 13px;
-    line-height: 1.4;
     margin-bottom: 8px;
 }
 
@@ -122,28 +134,41 @@ body {
 .add-to-cart {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #dddddd;
-    color: #777777;
+    background-color: #444444;
+    color: #ffffff;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 13px;
 }
 
+.add-to-cart:hover {
+    background-color: #000000;
+}
+
+/* Newsletter */
 .newsletter {
     margin-top: 32px;
     padding: 24px;
     background-color: #f7f7f7;
 }
 
+.newsletter label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
 .newsletter input {
     padding: 8px;
-    border: 1px solid #dddddd;
+    border: 1px solid #cccccc;
     border-radius: 4px;
     font-size: 13px;
     width: 200px;
-    margin-right: 8px;
+    margin-bottom: 12px;
 }
 
+/* Footer */
 .footer {
     padding: 16px 24px;
     background-color: #f0f0f0;
@@ -153,19 +178,16 @@ body {
 }
 
 .footer a {
-    color: #999999;
+    color: #333333;
     text-decoration: none;
     margin-left: 8px;
 }
 
+.footer a:hover {
+    text-decoration: underline;
+}
 
 :focus-visible {
-    outline: 3px solid currentColor;
+    outline: 3px solid #000000;
     outline-offset: 3px;
-  }
-  
-  a:focus-visible,
-  button:focus-visible,
-  input:focus-visible {
-    border-radius: 4px;
-  }
+}
