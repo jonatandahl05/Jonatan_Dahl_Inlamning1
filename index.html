@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,16 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="top-bar">
-        <header class="top-bar">
+    <header class="top-bar">
         <div class="logo">MyShop</div>
-        <div class="menu">
         <nav class="menu" aria-label="Primary">
-            <div class="menu-item"><a href="#">Home</a></div>
-            <div class="menu-item"><a href="#">Products</a></div>
-            <div class="menu-item"><a href="#">Contact</a></div>
-        </div>
-    </div>
+            <a class="menu-item" href="#">Home</a>
+            <a class="menu-item" href="#products">Products</a>
+            <a class="menu-item" href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -33,7 +28,7 @@
     </div>
 
     <div class="content">
-        <div class="section-title">
+        <div class="section-title" id="products">
             <h2>Our Products</h2>
         </div>
 
@@ -73,7 +68,7 @@
         </div>
     </div>
 
-    <div class="newsletter">
+    <div class="newsletter" id="contact">
         <h2>Subscribe to our newsletter</h2>
         <p>Get the latest updates and offers.</p>
         <form>
@@ -84,14 +79,10 @@
     </div>
     </main>
 
-    <div class="footer">
-    <footer class="footer"></footer>
+    <footer class="footer">
         <p>© 2025 MyShop. All rights reserved.</p>
         <a href="#">Click here</a>
-    </div>
     </footer>
     <script src="script.js"></script> 
 </body>
-
-
 </html>
