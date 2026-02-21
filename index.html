@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preload" as="image" href="images/pexels-photo-373912.jpeg">
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -21,9 +22,11 @@
     <div class="hero">
         <img src="images/pexels-photo-373912.jpeg"
              class="hero-image"
-             alt="A nice city from the top"
+             alt="Person shopping online using a laptop"
              width="1200"
-             height="600">
+             height="600"
+             fetchpriority="high"
+             decoding="async">
         <div class="hero-text">
             <h1>Welcome to MyShop</h1>
             <p>Find the best products at the lowest prices.</p>
@@ -103,6 +106,6 @@
         <p>© 2025 MyShop. All rights reserved.</p>
         <a href="#">Click here</a>
     </footer>
-    <script src="script.js"></script> 
+    <script src="script.js" defer></script> 
 </body>
 </html>
