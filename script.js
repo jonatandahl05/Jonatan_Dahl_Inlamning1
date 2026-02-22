@@ -19,3 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+if (window.axe) {
+    window.addEventListener("load", () => {
+      axe.run().then(results => {
+        console.log("Axe violations:", results.violations);
+      });
+    });
+  }
