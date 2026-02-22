@@ -179,8 +179,9 @@ body {
 
 .footer a {
     color: #333333;
-    text-decoration: none;
     margin-left: 8px;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .footer a:hover {
