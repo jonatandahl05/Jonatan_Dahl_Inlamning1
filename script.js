@@ -27,3 +27,25 @@ if (window.axe) {
       });
     });
   }
+
+
+  if (new URLSearchParams(window.location.search).has("perf")) {
+    window.addEventListener("load", () => {
+      try {
+        const po = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          // LCP is in milliseconds
+          console.log("LCP (ms):", Math.round(lastEntry.startTime));
+          console.log("LCP element:", lastEntry.element);
+        });
+  
+        po.observe({ type: "largest-contentful-paint", buffered: true });
+  
+
+        setTimeout(() => po.disconnect(), 10000);
+      } catch (e) {
+        console.log("PerformanceObserver for LCP not supported in this browser.", e);
+      }
+    });
+  }
